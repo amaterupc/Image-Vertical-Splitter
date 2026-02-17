@@ -27,9 +27,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # cache: 'npm' # package-lock.jsonがない場合の警告を防ぐため一時的に無効化
       - name: Install dependencies
-        run: npm ci
+        run: npm install # npm ci から npm install に変更（lockfile生成のため）
       - name: Build
         run: npm run build
       - name: Setup Pages
