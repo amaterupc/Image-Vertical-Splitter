@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-
-declare var JSZip: any;
+import JSZip from 'jszip';
 
 export interface SplitResult {
   blob: Blob;
@@ -70,8 +69,7 @@ export class ImageProcessorService {
       if (!blob) throw new Error('Failed to create blob');
 
       const ext = options.outputFormat === 'jpeg' ? 'jpg' : 'png';
-      const paddedIndex = (i + 1).toString().padStart(options.splitCount >= 10 ? 2 : 1, '0'); // Adaptive padding
-      // If N >= 10, pad 2 (01). If N >= 100, pad 3 (001). 
+      
       // User requirement: match digit count of N.
       const digits = options.splitCount.toString().length;
       const finalIndex = (i + 1).toString().padStart(digits, '0');
@@ -114,10 +112,6 @@ export class ImageProcessorService {
   }
 
   async generateZip(results: SplitResult[], zipFilename: string): Promise<Blob> {
-    if (typeof JSZip === 'undefined') {
-      throw new Error('JSZip library not loaded');
-    }
-
     const zip = new JSZip();
     results.forEach(res => {
       zip.file(res.filename, res.blob);
