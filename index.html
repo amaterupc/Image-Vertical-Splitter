@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,12 +35,16 @@
     "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.4?external=rxjs",
     "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.4?external=rxjs",
     "@angular/common": "https://esm.sh/@angular/common@^21.1.4?external=rxjs",
-    "@angular/core": "https://esm.sh/@angular/core@^21.1.4?external=rxjs"
+    "@angular/core": "https://esm.sh/@angular/core@^21.1.4?external=rxjs",
+    "vite": "https://esm.sh/vite@^7.3.1?external=rxjs",
+    "@analogjs/vite-plugin-angular": "https://esm.sh/@analogjs/vite-plugin-angular@^2.2.3?external=rxjs"
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-950 text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
   <app-root></app-root>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
