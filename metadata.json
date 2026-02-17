@@ -1,0 +1,5 @@
+{
+  "name": "Image Vertical Splitter",
+  "description": "ブラウザ完結型の画像垂直分割ツール。サーバー送信なしで画像を縦方向に分割し、ZIPで一括ダウンロードできます。",
+  "requestFramePermissions": []
+}

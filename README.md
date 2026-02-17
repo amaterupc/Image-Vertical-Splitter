@@ -1,11 +1,39 @@
-<div align="center">
+# Image Vertical Splitter (画像垂直分割ツール)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+ブラウザ上で画像を縦方向に指定した数で分割し、ZIPで一括ダウンロードできるWebアプリケーションです。
+サーバーへのアップロードを行わず、すべての処理をクライアントサイド（ブラウザ内）で完結するため、プライバシー面でも安心して利用できます。
 
-  <h1>Built with AI Studio</h2>
+![Preview](./preview.png)
+*(※ここにスクリーンショットなどを配置すると分かりやすくなります)*
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 主な機能
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+- 🖼 **画像入力**: ドラッグ&ドロップ対応 (PNG, JPG, WEBP)
+- ✂️ **分割設定**:
+  - 分割数: 2〜50分割
+  - 余り処理: 割り切れないピクセルを「均等配分」または「末尾集約」から選択可能
+- 👁 **プレビュー**: 画像上に分割ラインをガイド表示
+- 📦 **出力**:
+  - ZIPでの一括ダウンロード
+  - 個別画像のダウンロード
+  - 形式選択 (PNG / JPEG) と画質設定
+- 🔒 **セキュア**: Canvas APIを使用し、外部サーバーに画像を送信しません
 
-</div>
+## 技術スタック
+
+- **Framework**: Angular (v18+) - Standalone Components, Signals, Zoneless
+- **Styling**: Tailwind CSS (CDN版を使用)
+- **Library**: JSZip (ZIP圧縮用)
+
+## 使い方 / インストール
+
+ビルド不要で、ブラウザがあればすぐに動作します。
+
+1. このリポジトリをダウンロード（またはClone）します。
+2. `index.html` をブラウザで開きます。
+
+※ `file://` プロトコルでも動作するように作られていますが、Canvasのセキュリティ制約（Tainted Canvas）を回避するため、ローカルサーバー（Live Server等）経由で開くことを推奨します。
+
+## ライセンス
+
+MIT License
