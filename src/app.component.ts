@@ -6,6 +6,7 @@ import { ImageProcessorService, SplitResult, SplitOptions } from './services/ima
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [CommonModule, FileUploadComponent, PreviewOverlayComponent],
   templateUrl: './app.component.html'
 })

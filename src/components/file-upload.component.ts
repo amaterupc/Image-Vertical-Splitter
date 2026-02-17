@@ -2,13 +2,14 @@ import { Component, output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-file-upload',
+  standalone: true,
   template: `
     <div 
-      class="relative border-2 border-dashed rounded-xl p-8 text-center transition-all duration-300 group cursor-pointer"
+      class="relative border-2 border-dashed rounded-xl p-8 text-center transition-all duration-300 group cursor-pointer hover:border-slate-400"
       [class.border-brand-500]="isDragging()"
-      [class.bg-brand-500/10]="isDragging()"
+      [class.bg-brand-500]="isDragging()"
+      [class.bg-opacity-10]="isDragging()"
       [class.border-slate-600]="!isDragging()"
-      [class.hover:border-slate-400]="!isDragging()"
       [class.bg-slate-800]="!isDragging()"
       (dragover)="onDragOver($event)"
       (dragleave)="onDragLeave($event)"

@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite';
 import angular from '@analogjs/vite-plugin-angular';
+import { resolve } from 'node:path';
 
 export default defineConfig({
-  plugins: [angular()],
+  plugins: [
+    angular({
+      tsconfig: resolve(__dirname, 'tsconfig.app.json')
+    })
+  ],
   build: {
     outDir: 'dist',
   },

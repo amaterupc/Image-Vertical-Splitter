@@ -2,6 +2,7 @@ import { Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'app-preview-overlay',
+  standalone: true,
   template: `
     <div class="absolute inset-0 pointer-events-none border border-slate-500/50 rounded-lg overflow-hidden">
       <!-- Image overlay container -->

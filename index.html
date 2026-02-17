@@ -22,29 +22,15 @@
       }
     }
   </script>
-<script type="importmap">
-{
-  "imports": {
-    "rxjs": "https://esm.sh/rxjs@^7.8.2?conditions=es2015",
-    "rxjs/operators": "https://esm.sh/rxjs@^7.8.2/operators?conditions=es2015",
-    "rxjs/ajax": "https://esm.sh/rxjs@^7.8.2/ajax?conditions=es2015",
-    "rxjs/webSocket": "https://esm.sh/rxjs@^7.8.2/webSocket?conditions=es2015",
-    "rxjs/testing": "https://esm.sh/rxjs@^7.8.2/testing?conditions=es2015",
-    "rxjs/fetch": "https://esm.sh/rxjs@^7.8.2/fetch?conditions=es2015",
-    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.4?external=rxjs",
-    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.4?external=rxjs",
-    "@angular/core": "https://esm.sh/@angular/core@^21.1.4?external=rxjs",
-    "@angular/common": "https://esm.sh/@angular/common@^21.1.4?external=rxjs",
-    "vite": "https://esm.sh/vite@^7.3.1?external=rxjs",
-    "@analogjs/vite-plugin-angular": "https://esm.sh/@analogjs/vite-plugin-angular@^2.2.3?external=rxjs",
-    "jszip": "https://esm.sh/jszip@^3.10.1?external=rxjs"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-950 text-slate-200 antialiased selection:bg-brand-500 selection:text-white">
-  <app-root></app-root>
+  <app-root>
+    <div class="min-h-screen grid place-items-center p-6 text-center">
+      <p class="text-slate-300">
+        アプリを起動中です。表示されない場合は `npm run dev` でローカルサーバーから開いてください。
+      </p>
+    </div>
+  </app-root>
   <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
